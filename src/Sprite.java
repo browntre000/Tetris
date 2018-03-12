@@ -5,6 +5,12 @@ public class Sprite implements PaintAndMove {
     int xSize;
     int[] pos = new int[2];
 
+    public Sprite(){
+        this.pos[0] = 0;
+        this.pos[1] = 0;
+        this.xSize = 10;
+    }
+
     public Sprite(int x, int y, int xSize){
         this.pos[0] = x;
         this.pos[1] = y;

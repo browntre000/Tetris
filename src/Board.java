@@ -27,7 +27,7 @@ public class Board extends JPanel implements ActionListener {
 
     @Override
     public void paintComponent(Graphics g) {
-
+        gb.paint();
     }
 
     public void printSimpleString(String s, int width, int XPos, int YPos, Graphics g2d){
