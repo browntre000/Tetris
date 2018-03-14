@@ -6,8 +6,9 @@ import java.awt.event.ActionListener;
 public class Board extends JPanel implements ActionListener {
 
     GameBoard gb;
-    final int HEIGHT = 1000;
-    final int WIDTH = 500;
+    Part part;
+    final int HEIGHT = 800;
+    final int WIDTH = 800;
 
 
     public Board(){
@@ -27,7 +28,7 @@ public class Board extends JPanel implements ActionListener {
 
     @Override
     public void paintComponent(Graphics g) {
-        gb.paint();
+        gb.paint(g);
     }
 
     public void printSimpleString(String s, int width, int XPos, int YPos, Graphics g2d){
