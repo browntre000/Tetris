@@ -6,8 +6,9 @@ public class Tile extends Sprite {
     Random rand = new Random();
     boolean isBonus;
     int color, direction;
+    int xPos = 0, yPos = 0;
 
-    public Tile(int x, int y){
+    public Tile(int x, int y, int xPos, int yPos){
         super(x, y);
         int direction = rand.nextInt(4);
 
@@ -50,11 +51,33 @@ public class Tile extends Sprite {
         else if(random <= 100){
             color = 10;
         }
+
+        this.xPos = xPos;
+        this.yPos = yPos;
+    }
+
+    public int getXPos() {
+        return xPos;
+    }
+
+    public int getYPos() {
+        return yPos;
     }
 
     public void paint(Graphics g){
         super.paint(g, this.color);
+    }
 
+    public void moveDown(){
+        yPos += 1;
+    }
+
+    public void moveLeft(){
+        xPos -= 1;
+    }
+
+    public void moveRight(){
+        xPos += 1;
     }
 
 }

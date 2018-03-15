@@ -20,6 +20,10 @@ public class Sprite implements PaintAndMove {
         this.pos[1] = y - xSize/2;
     }
 
+    public int getXSize(){
+        return xSize;
+    }
+
     public int[] getPos(){
         return pos;
     }

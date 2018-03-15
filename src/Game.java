@@ -10,15 +10,13 @@ public class Game extends JFrame implements KeyListener {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setResizable(false);
-        setBounds(new Rectangle(800, 450, 400, 400));
+        setFocusable(true);
         setTitle("Tetris");
         board = new Board();
         add(board);
         pack();
         setLocationRelativeTo(null);
         addKeyListener(this);
-        pack();
-        setLocationRelativeTo(null);
         board.startGame();
     }
 
