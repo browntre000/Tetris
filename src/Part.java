@@ -21,15 +21,13 @@ public class Part {
     public void setup(){
         part[0] = new Tile(16 * 30 + 5 * 16, 15, 16, 0);
         for(int i = 1; i < part.length; i++){
+
+            part[i] = new Tile(0,0,0,0);
+
             int lastDirection = part[i-1].direction;
-            int[] lastPos = part[i-1].getPos();
-            int lastX = lastPos[0];
-            int lastY = lastPos[1];
 
             int currentDirection = part[i].direction;
-            int[] currentPos = part[i].getPos();
-            int currentX = currentPos[0];
-            int currentY = currentPos[1];
+
 
             if((Math.abs(lastDirection - currentDirection) == 2) || (Math.abs(lastDirection - currentDirection) == 0)) {
                 switch (currentDirection) {
